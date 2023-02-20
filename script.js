@@ -25,7 +25,7 @@ const render = () => {
     counE.innerText = state.value.toString()
 }
 //catch the dom element 
-const inE = document.getElementById('increment')
+// const inE = document.getElementById('increment')
 const deE = document.getElementById('increment')
 const counE = document.getElementById('counter')
 
