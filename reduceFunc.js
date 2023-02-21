@@ -6,18 +6,19 @@ const actions = [
     { type: 'dec', payload: 1 },
 ]
 const reducer = (state, action) => {
+    // action hocce actions array er protiti object
+    // state hocce result or previous result
     if (action.type === 'inc') {
         return {
             ...state,
-            value: state.value + 1
+            value: state.value + action.payload
 
         }
     }
     else if (action.type === 'dec') {
         return {
             ...state,
-            value: state.value - 1
-
+            value: state.value - action.payload
         }
     } else {
         return state
