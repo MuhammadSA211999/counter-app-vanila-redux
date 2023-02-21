@@ -9,14 +9,14 @@ const reducer = (state, action) => {
     if (action.type === 'inc') {
         return {
             ...state,
-            payload: state.payload + 1
+            value: state.value + 1
 
         }
     }
     else if (action.type === 'dec') {
         return {
             ...state,
-            payload: state.payload - 1
+            value: state.value - 1
 
         }
     } else {
@@ -26,4 +26,5 @@ const reducer = (state, action) => {
 const initialState = {
     value: 0
 }
-const value = actions.reduce(reducer, initialState.value)
+const value = actions.reduce(reducer, initialState)
+console.log(value);
